@@ -72,7 +72,7 @@ Logs are also accessible through the command line. An example command:
     $ bin/catalyze.sh logs "*" --hours=2
 
 See `bin/catalyze.sh logs --help` for full details, but be aware that the
-default query of "app*" seems to miss most of the logs we care about.
+default query of `"app*"` seems to miss most of the logs we care about.
 
 Detailed monitoring information is not accessible via the command line, but you
 can get some high-level stats using `bin/catalyze.sh metrics` and
