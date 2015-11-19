@@ -26,8 +26,8 @@ Heroku ever would, but we'll see.
    access to our Catalyze wrapper script (`bin/catalyze.sh`):
 
    ```
-   $ bin/catalyze.sh associate healthproprod
-   $ bin/catalyze.sh associate healthprostaging
+   $ bin/catalyze.sh associate healthproprod app01
+   $ bin/catalyze.sh associate healthprostaging app01
    ```
 
 1. Ensure you are logged into the right Catalyze user and have access:
