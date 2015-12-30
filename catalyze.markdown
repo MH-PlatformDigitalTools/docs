@@ -28,6 +28,11 @@ Heroku ever would, but we'll see.
    ```
    $ bin/catalyze.sh associate healthproprod app01
    $ bin/catalyze.sh associate healthprostaging app01
+
+   OR
+
+   $ bin/catalyze.sh associate healthproprod onboarding01
+   $ bin/catalyze.sh associate healthprostaging onboarding01
    ```
 
 1. Ensure you are logged into the right Catalyze user and have access:
