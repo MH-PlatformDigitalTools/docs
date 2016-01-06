@@ -28,6 +28,20 @@ Heroku ever would, but we'll see.
    ```
    $ bin/catalyze.sh associate healthproprod app01
    $ bin/catalyze.sh associate healthprostaging app01
+
+   OR
+
+   $ bin/catalyze.sh associate healthproprod onboarding01
+   $ bin/catalyze.sh associate healthprostaging onboarding01
+   ```
+
+1. *Optional*: Pick a default environment to associate with. We generally
+   would recommend using the staging environment since that is least likely
+   to cause heartache if incorrectly used.
+
+   ```
+   $ catalyze default healthprostaging
+   healthprostaging is now the default environment
    ```
 
 1. Ensure you are logged into the right Catalyze user and have access:
