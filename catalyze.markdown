@@ -37,8 +37,8 @@ Heroku ever would, but we'll see.
    
 1. Fetch the new remotes so `git rev-parse prod/master` and `git rev-parse staging/master` don't fail in `deploy.sh`:
    ```
-   $ git fetch prod/master
-   $ git fetch staging/master
+   $ git fetch prod
+   $ git fetch staging
    ```
 
 1. *Optional*: Pick a default environment to associate with. We generally
