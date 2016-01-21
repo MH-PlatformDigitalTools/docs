@@ -34,6 +34,12 @@ Heroku ever would, but we'll see.
    $ bin/catalyze.sh associate healthproprod onboarding01
    $ bin/catalyze.sh associate healthprostaging onboarding01
    ```
+   
+1. Fetch the new remotes so `git rev-parse prod/master` and `git rev-parse staging/master` don't fail in `deploy.sh`:
+   ```
+   $ git fetch prod
+   $ git fetch staging
+   ```
 
 1. *Optional*: Pick a default environment to associate with. We generally
    would recommend using the staging environment since that is least likely
