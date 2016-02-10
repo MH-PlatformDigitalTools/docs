@@ -118,6 +118,34 @@ can get some high-level stats using `bin/catalyze.sh metrics` and
 
     $ bin/catalyze.sh console db01
 
+### Verify Salesforce permissions and connectivity
+
+We use Salesforce as a backend in some environments. To verify that our user
+has the correct field-level permissions (was a problem a few times when using
+change sets), run the following script, updating the collection and name fields
+as appropriate:
+
+    $ ./bin/catalyze.sh -E <environment> "bundle exec irb"
+    ...
+    require 'restforce'
+    client = Restforce.new
+    collection = 'Contact'
+    name = 'Updated_Terms_Of_Service_At__c'
+    described = client.describe(collection)
+    described.fields.map(&:name).include?(name)
+
+The result of running this should be "true".
+
+To verify that our Salesforce credentials are correct, try:
+
+    $ ./bin/catalyze.sh -E <environment> "bundle exec irb"
+    ...
+    require 'restforce'
+    client = Restforce.new
+    described = client.describe('Contact')
+
+It should spit out a long string of fields, not an error.
+
 ## Debugging Tips
 
 The first time you deploy code to a new environment, Catalyze needs to
